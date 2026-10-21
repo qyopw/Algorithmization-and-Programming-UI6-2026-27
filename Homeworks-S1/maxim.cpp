@@ -1,6 +1,6 @@
 #include <algorithm> //использовал swap 
 #include <cmath> //чтобы творить волшебство вне Хогварда
-#include "Header.h"
+#include "../Header.h"
 using namespace std;
 
 // ВХОД: *f, *g - указатели на функции; a,b - границы отрезка поиска; h - шаг проверки
@@ -19,6 +19,7 @@ double maxim(double (*f)(float), double (*g)(float), float a, float b, float h) 
 	return max;
 }
 
+// нужно проверить условия домашки, а то тут зачем-то на входе функция g, которая нигде не используется.
 
 
 

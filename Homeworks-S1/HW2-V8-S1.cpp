@@ -4,7 +4,7 @@
 #include <algorithm> //использовал swap в функции selectionSort
 #include <sstream> //istringstream - считал из строки words по-отельности слова в word[]
 #include <cmath> //использовал тригонометрические функции в f(x) и g(x)
-#include "Header.h"
+#include "../Header.h"
 using namespace std;
 
 bool selectionSort(int* arr, int n) { 
@@ -23,7 +23,7 @@ bool selectionSort(int* arr, int n) {
 	return true;
 }
 
-bool checkSimbolBlackLine(string word, string black_line) {
+bool checkSymbolBlackLine(string word, string black_line) {
 	int black_length = black_line.length(), buf;
 	buf = word.length(); //чтобы на каждом символе слова не вызывать .length(), не уверен что она тут нужна
 	for (int j = 0; j < buf; j++) { 
@@ -48,7 +48,7 @@ double g(float x) { return tan(x+1)/(x+1); } //функция g
 
 int HW2V8()
 {
-	ifstream fin("Homeworks S1/input-hw2.txt"); //создаём объект f, читаем файл, проверяем открылся ли файл
+	ifstream fin("Homeworks-S1/input-hw2.txt"); //создаём объект f, читаем файл, проверяем открылся ли файл
 	if (!fin.is_open()) {
 		cout << "\t не удалось открыть файл \n";
 		return -1;
@@ -110,7 +110,7 @@ int HW2V8()
 
 	//проверяем все слова, удаляем из списка те, что имеют совпадающие символы со списком выше
 	for (int i = 0; i < word_num;) {
-		if (checkSimbolBlackLine(word[i], black_line)) removeI_arr(word, i, word_num);
+		if (checkSymbolBlackLine(word[i], black_line)) removeI_arr(word, i, word_num);
 		else i++; //если слово удаляется, то следующее будет иметь тот же индекс из-за смещения
 	}
 
@@ -135,7 +135,7 @@ int HW2V8()
  /*
 	ЧТО ДОБАВИТЬ: 
 		1) Понять почему в line1 записывается " ", строка 60.
-		2) поэспериментировать с вводом
+		2) поэкспериментировать с вводом
 		3) сделать так, чтобы black_line вводилась с файла (хз зачем)
 		4) вводить a, b, h с файла
  */

@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 #include <algorithm>
-#include "Header.h"
+#include "../Header.h"
 using namespace std;
 
 int HW3V8() {

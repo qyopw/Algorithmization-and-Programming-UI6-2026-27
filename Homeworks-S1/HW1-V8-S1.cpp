@@ -2,7 +2,7 @@
 #include <iostream> //для потокового вывода
 #include <fstream> //для ifstream (чтения файла)
 #include <algorithm> //для max
-#include "Header.h"
+#include "../Header.h"
 using namespace std;
 
 
@@ -34,7 +34,7 @@ double square(double a, double b, int n) { //функция поиска пло�
 
 int HW1V8()
 {
-	ifstream f("Homeworks S1/input-hw1.txt"); // путь относительно корня проекта
+	ifstream f("Homeworks-S1/input-hw1.txt"); // путь относительно корня проекта
 	if (!f.is_open()) {
 		cout << "\t не удалось открыть файл \n";
 		return -1;

@@ -21,7 +21,7 @@ int LB1V8S2();
 // Функции, которые могут пригодиться в будущем
 bool selectionSort(int* arr, int n); //сортировка выбором
 double maxim(double (*f)(float), double (*g)(float), float a, float b, float h); //поиск наим. расстояния между функциями f,g на [a, b] с шагом h
-bool checkSimbolBlackLine(string word, string black_line); //проверка наличия символа в строке
+bool checkSymbolBlackLine(string word, string black_line); //проверка наличия символа в строке
 
 // Шаблон удаления элемента по индексу 
 template <typename T>
