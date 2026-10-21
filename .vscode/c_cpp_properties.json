@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "macOS (clang++)",
+            "includePath": ["${workspaceFolder}/**"],
+            "compilerPath": "clang++",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-x64"
+        },
+        {
+            "name": "Windows (MinGW g++)",
+            "includePath": ["${workspaceFolder}/**"],
+            "compilerPath": "g++",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        },
+        {
+            "name": "Linux (g++)",
+            "includePath": ["${workspaceFolder}/**"],
+            "compilerPath": "g++",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

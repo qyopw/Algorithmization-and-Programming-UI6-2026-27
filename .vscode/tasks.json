@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build project (macOS, clang++)",
+            "command": "clang++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-I${workspaceFolder}",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Homeworks S1/HW1-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/HW2-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/HW3-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/maxim.cpp",
+                "-o",
+                "${workspaceFolder}/outDebug"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "type": "cppbuild",
+            "label": "Build project (Windows, MinGW g++)",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-I${workspaceFolder}",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Homeworks S1/HW1-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/HW2-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/HW3-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/maxim.cpp",
+                "-o",
+                "${workspaceFolder}/outDebug.exe"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "type": "cppbuild",
+            "label": "Build project (Linux, g++)",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-I${workspaceFolder}",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Homeworks S1/HW1-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/HW2-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/HW3-V8.cpp",
+                "${workspaceFolder}/Homeworks S1/maxim.cpp",
+                "-o",
+                "${workspaceFolder}/outDebug"
+            ],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

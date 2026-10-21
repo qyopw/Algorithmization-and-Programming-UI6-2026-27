@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug project (macOS, LLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/outDebug",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build project (macOS, clang++)"
+    },
+    {
+      "name": "Debug project (Windows, MinGW GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/outDebug.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe",
+      "preLaunchTask": "Build project (Windows, MinGW g++)"
+    },
+    {
+      "name": "Debug project (Linux, GDB)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/outDebug",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "preLaunchTask": "Build project (Linux, g++)"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/egor/Documents/GitHub/Algorithmization-and-Programming-UI6-2026-27",
+      "program": "/Users/egor/Documents/GitHub/Algorithmization-and-Programming-UI6-2026-27/build/Debug/outDebug"
+    }
+  ]
+}
