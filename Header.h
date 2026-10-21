@@ -5,10 +5,18 @@
 using namespace std;
 
 // Общая часть
+bool BackToMenu();
+//1 семестр
 int HW1V8();
 int HW2V8();
 int HW3V8();
-bool BackToMenu();
+int LB1V8();
+int LB2V8();
+int LB3V8();
+//2 семеcтр
+int HW1V8S2();
+int LB1V8S2();
+
 
 // Функции, которые могут пригодиться в будущем
 bool selectionSort(int* arr, int n); //сортировка выбором
