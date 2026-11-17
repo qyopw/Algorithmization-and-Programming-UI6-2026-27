@@ -5,7 +5,8 @@
 #include "Header.h"
 using namespace std;
 
-int HW_num; 
+
+int status;
 // в эту переменную записывается число из файла при каждом запуске проекта.
 // после окончания выполнения программы значение числа пишется в файл.
 // если просто закрыть программу в процессе то значение переменной не изменится, нужно нажимать "exit"
@@ -13,11 +14,11 @@ int HW_num;
 int exit_code;
 
 void menu() {
-	if (HW_num==0) { //запускает ручной ввод если в файле не указан номер домашки
-		cout << "\n\t\t Введите номер домашнего задания: (0 - выход) ";
-		cin >> HW_num;
+	if (status==0) { //запускает ручной ввод если в файле не указан номер домашки
+		cout << "\n\t\t Введите номер домашнего задания: (0 - выход, 11-13 - лабы) ";
+		cin >> status;
 	}
-	switch (HW_num) {
+	switch (status) {
 	case 0:
 		break;
 	case 1:
@@ -32,9 +33,21 @@ void menu() {
 		cout << "\n\t\t\t Домашнее Задание №3 \n";
 		exit_code = HW3V8();
 		break;
+	case 11:
+		cout << "\n\t\t\t Лаба №1 \n";
+		exit_code = LB1V8();
+		break;
+	case 12:
+		cout << "\n\t\t\t Лаба №2 \n";
+		exit_code = LB2V8();
+		break;
+	case 13:
+		cout << "\n\t\t\t Лаба №3 \n";
+		exit_code = LB3V8();
+		break;
 	default:
 		cout << "Ошибка ввода";
-		HW_num = 0;
+		status = 0;
 		menu(); //я понимаю, что рекурсия переполняет память, но мне пофиг
 		break;
 	}
@@ -46,13 +59,13 @@ bool BackToMenu() { // я хз почему решил использовать 
 	bool key = true;
 	while (key) { //своеобразная проверка ввода + выбор
 		cin >> choose;
-		if (choose == "M" or choose == "m") { //
-			HW_num = 0;
+		if (choose == "M" || choose == "m") { //
+			status = 0;
 			key = false;
 			menu();
 		}
-		else if (choose == "E" or choose == "e") key = false;
-		else if (choose == "R" or choose == "r") {
+		else if (choose == "E" || choose == "e") key = false;
+		else if (choose == "R" || choose == "r") {
 			key = false;
 			menu();
 		} else cout << "Ошибка, введите данные снова.";
@@ -60,7 +73,7 @@ bool BackToMenu() { // я хз почему решил использовать 
 	return 1;
 }
 
-bool checkin_HW_num() { //потенциальная проверка ввода
+bool checkin_status() { //потенциальная проверка ввода
 	return 1;
 }
 
@@ -74,9 +87,9 @@ int main()
 		return -1;
 	}
 
-	fin >> HW_num; //записываем число из файла в глобальную переменную
+	fin >> status; //записываем число из файла в глобальную переменную
 	fin.close(); //закрываем файл
-	checkin_HW_num(); //проверка введённого
+	checkin_status(); //проверка введённого
 	menu(); 
 	
 	ofstream fout("Input-Main.txt"); //создаём объект fout, пишем в файл, проверяем доступ к файлу
@@ -85,7 +98,7 @@ int main()
 		return -2;
 	}
 
-	fout << HW_num << endl; //перезапись нашей переменной
+	fout << status << endl; //перезапись нашей переменной
 	fout.close(); //закрываем файл
 
 
